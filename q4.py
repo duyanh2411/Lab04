@@ -49,20 +49,3 @@ current_timestamp = datetime.today().strftime('%d-%b-%Y')
 old_name = r"D:\thonny\lab4a.q4a"
 new_name = r"D:\thonny\lab4a.q4a" + current_timestamp + ".txt"
 os.rename(old_name, new_name)
-
-import os
-
-folder = r"D:\thonny\lab4a.q4b\\"
-print('Before rename')
-files = os.listdir(folder)
-print(files)
-
-for file_name in files:
-
-    old_name = os.path.join(folder, file_name)
-
-    new_name = old_name.replace('.txt', '.pdf')
-    os.rename(old_name, new_name)
-
-print('After rename')
-print(os.listdir(folder))
